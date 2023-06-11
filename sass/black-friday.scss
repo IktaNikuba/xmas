@@ -1,0 +1,141 @@
+.black-friday {
+    padding: $section__padding--big;
+
+    p {
+    	text-align: center;
+    	color: $font__color--red;
+    	font-size: $font__size--large;
+    	font-style: italic;
+    	font-weight: $font__weight--normal;
+    	line-height: $line-height--normal;
+        padding: $text__padding;
+        margin: 0;
+    }
+
+    &__coupons {
+    	margin: 0;
+    	padding: 0;
+    	display: flex;
+    	flex-wrap: wrap;
+    	grid-gap: 10px;
+	    align-items: center;
+	    justify-content: center;
+    }
+
+    &__coupon {
+    	background-image: url(../img/coupon-black-friday.svg);
+    	background-repeat: no-repeat;
+    	background-position: center;
+    	background-size: cover;
+    	width: 520px;
+    	height: 160px;
+    	padding: 10px;
+    	padding-left: 0;
+    	align-items: center;
+    	display: grid;
+    	grid-template-columns: 0.75fr 25% 1fr 0fr auto;
+    	grid-template-rows:  15% 0fr 1fr auto;
+    	grid-template-areas:
+            "percent . . . icon"
+	        "percent header header header header"
+	        "percent text text text text"
+	        "percent button link link link";
+
+	    @media #{$sm} {
+	    	background-color: #F4F4F1;
+	    	grid-template-areas:
+                "percent . . . icon"
+		        "percent header header header header"
+		        "percent text text text text"
+		        "button link link link link";
+	    }
+
+        .coupon__percent {
+            grid-area: percent;
+            text-align: center;
+            font-weight: $font__weight--normal;
+            font-size: $font__size--small;
+            font-style: italic;
+            line-height: $line-height--smallest;
+
+            span {
+                font-weight: $font__weight--bold;
+                font-size: $font__size--very-big;
+                line-height: $line-height--large;
+            }
+
+            sub {
+                font-weight: $font__weight--bolder;
+                font-size: $font__size--extralarge;
+                line-height: $line-height--medium;
+            }
+        }
+
+    	.coupon__header {
+    		grid-area: header;
+    		margin: 0;
+
+    		@media #{$sm} {
+    			text-align: right;
+    			padding-bottom: 5px;
+    		}
+    	}
+
+    	.coupon__text {
+    		grid-area: text;
+    		color: $font__color--black;
+    		font-weight: $font__weight--ligth;
+    		font-size: $font__size--small;
+    		line-height: $line-height--smallest;
+    		text-align: left;
+    		margin: 0;
+            padding: 0;
+
+    		@media #{$sm} {
+    			text-align: right;
+    		}
+    	}
+
+    	.coupon__button {
+    		grid-area: button;
+    	}
+
+    	.coupon__link {
+    		grid-area: link;
+    		text-align: center;
+            align-self: center;
+            font-size: $font__size--small;
+            font-weight: $font__weight--ligth;
+            line-height: $line-height--smallest;
+            text-decoration: none;
+            color: $font__color--red;
+
+            &:hover {
+            	color: $font__color--grey;
+            }
+
+    	}
+
+    	.coupon__icon {
+    		grid-area: icon;
+    		justify-self: end;
+
+    		img {
+    		    vertical-align: super;
+    	    }
+    	}
+    }
+
+    &__button {
+        text-align: center;
+        margin-top: 42px;
+
+        a {
+            color: $font__color--grey;
+        }
+
+        img {
+            padding-right: 10px;
+        }
+    }
+}

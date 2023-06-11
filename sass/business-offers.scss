@@ -1,0 +1,15 @@
+.business-offers {
+	padding: $section__padding;
+	background-color: $background-color--cream;
+
+	&__btn-group {
+		display: flex;
+        align-items: center;
+	    justify-content: center;
+	    gap: 10px 30px;
+
+	    @media #{$md} {
+	    	flex-direction: column;
+	    }
+	}
+}

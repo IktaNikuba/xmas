@@ -1,0 +1,232 @@
+.hot-offers {
+	padding: $section__padding;
+	text-align: center;
+
+	h2 {
+		color: $h2__color--black;
+	}
+
+	p {
+		color: $font__color--red;
+		font-style: italic;
+		font-size: $font__size--large;
+		font-weight: $font__weight--normal;
+		line-height: $line-height--normal;
+		padding: $text__padding;
+		margin: 0;
+	}
+
+	&__products {
+
+		.card__wrapper {
+			padding: 0;
+		}
+
+		.products__card {
+			display: grid;
+			grid-gap: 0;
+		    align-items: center;
+		    justify-content: start;
+		    padding: 20px;
+		    width: 100%;
+		    height: 100%;
+		    min-height: 300px;
+
+			.card__logo {
+			    grid-area: logo;
+			    justify-self: start;
+
+			    img {
+			    	object-fit: contain;
+			    }
+			}
+
+		    .card__text {
+		    	grid-area: text;
+		    	text-align: left;
+		    	align-self: end;
+
+		    	h3 {
+		    		color: $h3__color--black;
+		    	}
+
+		    	p {
+		    		color: $h3__color--black;
+		    		font-size: $font__size--medium;
+		    		font-weight: $font__weight--ligth;
+		    		line-height: $line-height--small;
+		    		margin: 0;
+		    	}
+		    }
+
+		    .card__discount {
+		    	grid-area: discount;
+		    	color: $font__color--white;
+		    	font-size: $font__size--extralarge;
+		    	font-weight: $font__weight--ligth;
+		    	min-width: 100px;
+		    	justify-self: end;
+		    }
+
+		    .card__picture {
+		    	grid-area: picture;
+
+		    	img {
+		    		width: 90%;
+		    		max-height: 350px;
+		    		object-fit: contain;
+		    	}
+		    }
+
+		    .card__button {
+		    	grid-area: btn;
+		    	align-self: end;
+		    	width: 100%;
+		    	max-width: 150px;
+		    }
+		}
+
+		.products__card--phone {
+			background-color: $color--cream;
+			grid-template-columns: 1fr 2fr auto;
+	        grid-template-rows: 0fr 1fr 70px;
+	        grid-template-areas:
+			    "logo . discount"
+			    "text picture picture"
+			    "btn picture picture";
+
+			@media #{$sm} {
+				grid-template-columns: 1fr 2fr auto;
+				grid-template-rows: 0fr 1fr 1fr 70px;
+			    grid-template-areas:
+			        "logo . discount"
+			        "picture picture picture"
+			        "text text text"
+			        "btn btn .";
+			}
+
+			.card__discount {
+		    	background-image: url(../img/flag-blue.svg);
+		    	background-position: center;
+		    	background-repeat: no-repeat;
+		    }
+
+			.card__button {
+				justify-self: start;
+			}
+		}
+
+		.products__card--notebook {
+			display: grid;
+			grid-template-columns: 1fr 1fr 150px;
+	        grid-template-rows: 0fr 1fr 1fr 0fr;
+	        grid-template-areas:
+			    "logo. discount"
+			    "picture picture picture"
+			    "picture picture picture"
+			    "text . btn";
+
+			@media #{$sm} {
+				grid-template-columns: 1fr 1fr 150px;
+				grid-template-rows: 0fr 1fr 0fr 0fr;
+				grid-template-areas:
+				    "logo. discount"
+				    "picture picture picture"
+				    "text text text"
+				    "btn btn btn";
+
+				.card__button {
+					align-self: end;
+				}
+
+				img {
+					width: 60%;
+				}
+			}
+
+			.card__discount {
+		    	background-image: url(../img/flag-blue.svg);
+		    	background-position: center;
+		    	background-repeat: no-repeat;
+		    }
+		}
+
+		.products__card--sneakers {
+			grid-template-columns: 1fr 150px;
+	        grid-template-rows: 0fr 1fr 117px;
+			grid-template-areas:
+			    "logo discount"
+			    "picture text"
+			    "picture btn";
+
+			.card__discount {
+		    	background-image: url(../img/flag-green.svg);
+		    	background-position: center;
+		    	background-repeat: no-repeat;
+		    }
+		}
+
+		.products__card--cosmetic {
+			background-image: url(../img/cosmetic.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			grid-template-columns: 1fr 1fr auto;
+	        grid-template-rows: 0fr 1fr 70px;
+			grid-template-areas:
+			    "logo . discount"
+			    "text picture picture"
+			    "btn picture picture";
+
+			.card__discount {
+		    	background-image: url(../img/flag-orange.svg);
+		    	background-position: center;
+		    	background-repeat: no-repeat;
+		    }
+
+			.card__logo,
+			.card__text {
+				background-color: $background-color--white;
+			}
+		}
+
+		.products__card--tour {
+			background-image: url(../img/tour.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			grid-template-columns: 1fr 1fr auto;
+	        grid-template-rows: 0fr 1fr 70px;
+			grid-template-areas:
+			    "logo . discount"
+			    "text picture picture"
+			    "btn picture picture";
+
+			.card__discount {
+		    	background-image: url(../img/flag-orange.svg);
+		    	background-position: center;
+		    	background-repeat: no-repeat;
+		    }
+
+			.card__text {
+				background-color: $background-color--white;
+				width: fit-content;
+			}
+		}
+
+		.products__card--dress {
+			background-color: #F4F4F1;
+			grid-template-columns: 1fr 1fr auto;
+	        grid-template-rows: 0fr 1fr 70px;
+			grid-template-areas:
+				"logo . discount"
+			    "text picture picture"
+			    "btn picture picture";
+
+			.card__discount {
+		    	background-image: url(../img/flag-green.svg);
+		    	background-position: center;
+		    	background-repeat: no-repeat;
+		    }
+		}
+	}
+}

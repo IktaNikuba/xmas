@@ -1,0 +1,159 @@
+.teasers {
+	background-image: url(../img/teasers-pattern.jpg);
+	text-align: center;
+	padding-bottom: 35px;
+
+	&__headline {
+		margin: 0;
+
+		h2 {
+			display: inline-block;
+			padding-top: 80px;
+			color: $h2__color--white;
+		}
+
+		p {
+			color: $font__color--red;
+			font-size: $font__size--large;
+			font-weight: $font__weight--normal;
+			line-height: $line-height--normal;
+			font-style: italic;
+			padding: $text__padding;
+			margin: 0;
+		}
+	}
+
+	&__flag {
+		display: inline-flex;
+		vertical-align: top;
+		margin-left: 77px;
+		margin-right: -140px;
+		background-color: #ffffff;
+		width: 63px;
+	    height: 135px;
+	    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50.03% 75%, 0% 100%);
+	    color: $font__color--red;
+	    font-size: $font__size--smallest;
+	    font-weight: $font__weight--normal;
+	    line-height: $line-height--micro;
+	    flex-direction: column;
+	    align-items: normal;
+	    row-gap: 7px;
+	    padding: 8px;
+
+	    &:hover {
+	    	color: black;
+	    	background-color: $background-color--red;
+	    }
+
+	    @media #{$lg} {
+	    	display: none;
+	    }
+
+	    .flag__perсent {
+            font-family: 'Baskervill';
+            font-size: $font__size--big;
+            line-height: 30.47px;
+	    }
+
+	    .flag__off {
+	    	color: #333333;
+            font-family: Tafelschrift;
+            font-size: 30px;
+            line-height: 30.47px;
+	    }
+	}
+
+	.teasers__card {
+		max-width: 350px;
+	    max-height: 285px;
+	    margin: 0 auto;
+
+		@media #{$md} {
+		    width: 70%;
+		    margin: 10px auto;
+		}
+
+		&:hover {
+
+			.teasers-card__text {
+			    background-color: #F12850;
+			    filter: none;
+			}
+
+			.card__image:before {
+				display: none;
+			}
+		}
+
+	    .card__image {
+			min-height: 200px;
+			background-blend-mode: overlay;
+		    background-color: #F12850BF;
+		    display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+	        	background-color: $background-color--darkgrey;
+        	}
+
+        	&:active {
+        		background-blend-mode: normal;
+        	}
+		}
+
+		.card__image-electronics {
+			background-image: url(../img/card-electronics.jpg);
+
+			&:before {
+            	content: "";
+            	background-image: url(../img/icon-electronics.svg);
+				background-repeat: no-repeat;
+				background-position: center;
+            	width: 106px;
+            	height: 100px;
+            	vertical-align: center;
+            }
+		}
+
+		.card__image-beauty {
+			background-image: url(../img/card-fasion.jpg);
+
+			&:before {
+            	content: "";
+            	background-image: url(../img/icon-beauty.svg);
+				background-repeat: no-repeat;
+				background-position: center;
+            	width: 106px;
+            	height: 100px;
+            	vertical-align: center;
+            }
+		}
+
+		.card__image-treavel {
+			background-image: url(../img/card-treavel.jpg);
+
+			&:before {
+            	content: "";
+				background-repeat: no-repeat;
+				background-position: center;
+            	background-image: url(../img/icon-treavel.svg);
+            	width: 106px;
+            	height: 106px;
+            	vertical-align: center;
+            }
+		}
+
+		.teasers-card__text {
+			background-color: $background-color--white;
+			min-height: 35px;
+			text-decoration: none;
+			color: $font__color--darkgrey;
+			display: flex;
+			align-items: center;
+			justify-content:center;
+			filter: blur(3px);
+		}
+	}
+}

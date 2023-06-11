@@ -1,0 +1,40 @@
+.about-sale {
+	padding: $section__padding--big;
+	background-color: $color--cream;
+
+	h2 {
+		padding-bottom: 30px;
+	}
+
+	&__content {
+		display: flex;
+		align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        column-gap: 20px;
+        @media #{$md} {
+        	row-gap: 30px
+        }
+	}
+
+	img {
+		object-fit: contain;
+		@media #{$md} {
+        	width: 80%;
+        }
+	}
+
+	p {
+		margin: 0;
+		color: $font__color--grey;
+        font-weight: $font__weight--ligth;
+        font-size: $font__size--small;
+        line-height: $line-height--smallest;
+        width: 50%;
+
+        @media #{$md} {
+        	width: 90%;
+        	row-gap: 30px;
+        }
+	}
+}

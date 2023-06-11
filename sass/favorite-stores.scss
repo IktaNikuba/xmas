@@ -1,0 +1,43 @@
+.favorite-stores {
+	padding: $section__padding;
+	background-color: $background-color--red;
+	text-align: center;
+
+	h2 {
+		color: $h2__color--white;
+	}
+
+	p {
+		color: $font__color--black;
+		font-size: $font__size--large;
+		font-weight: $font__weight--normal;
+		font-style: italic;
+		margin: 0;
+		padding: $text__padding;
+	}
+
+	&__list {
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+		padding: 0;
+		margin: 0;
+	}
+
+	&__item {
+		background-color:$background-color--white;
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&:hover {
+			border: 3px solid $color--grey;
+		}
+	}
+}

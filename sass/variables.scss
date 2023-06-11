@@ -1,0 +1,150 @@
+/* Color */
+$color--black:#000000;
+$color--white:#FFFFFF;
+$color--red:#F12850;
+$color--red-transporent:#F12850BF;
+$color--lightgrey:#E0E0E0;
+$color--grey: #627A89;
+$color--cream:#F6F6F6;
+$color--header: #5C6469;
+$color--darkgrey:#323538;
+$color--green:#27AE60;
+$color--blue:#3E75D1;
+$color--lightblue:#0077CC;
+
+/* font */
+$font__color--black: $color--black;
+$font__color--white: $color--white;
+$font__color--red: $color--red;
+$font__color--darkgrey: $color--darkgrey;
+$font__color--grey: $color--grey;
+$font__color--header: $color--header;
+$font__size--smallest: 10px;
+$font__size--small: 12px;
+$font__size--medium: 14px;
+$font__size--large: 16px;
+$font__size--extralarge: 21px;
+$font__size--big: 26px;
+$font__size--very-big: 48px;
+$font__size--gigant: 62px;
+$font__weight--ligth: 300;
+$font__weight--normal: 400;
+$font__weight--bold: 700;
+$font__weight--bolder: 800;
+$line-height--micro: 13px;
+$line-height--smallest: 16.5px;
+$line-height--small: 19px;
+$line-height--normal: 21px;
+$line-height--medium: 35px;
+$line-height--large: 65px;
+$line-height--big: 84px;
+
+/* background */
+$background-color--white: $color--white;
+$background-color--red: $color--red;
+$background-color--darkgrey: $color--darkgrey;
+$background-color--red-transporent: $color--red-transporent;
+$background-color--lightblue: $color--lightblue;
+$background-color--cream: $color--cream;
+
+/* h1 */
+$h1__color: $color--header;
+$h1__size: $font__size--gigant;
+$h1__weight: $font__weight--bolder;
+$h1__line-height: $line-height--big;
+$h1__size--sm: $font__size--very-big;
+$h1__line-height--sm: $line-height--large;
+
+/* h2 */
+$h2__color--white: $font__color--white;
+$h2__color--black: $font__color--black;
+$h2__size: $font__size--very-big;
+$h2__weight: $font__weight--ligth;
+$h2__line-height: $line-height--large;
+
+/* h3 */
+$h3__color--white: $font__color--white;
+$h3__color--black: $font__color--black;
+$h3__size: $font__size--medium;
+$h3__weight: $font__weight--bold;
+$h3__line-height: $line-height--small;
+
+/* h4 */
+$h4__color--white: $font__color--white;
+$h4__color--black: $font__color--black;
+$h4__size: $font__size--big;
+$h4__weight: $font__weight--ligth;
+$h4__line-height: $line-height--medium;
+
+
+/* border*/
+$border--lightgrey: 1px solid $color--lightgrey;
+$border--white: 1px solid $color--white;
+$border--red:  1px solid $color--red;
+
+/* padding */
+$h1__padding: 100px 0 40px;
+$h2__padding: 35px 0 0;
+$h2__padding--bottom: 0 0 80px;
+$h3__padding: 5px 0;
+$h4__padding--bottom: 25px;
+$section__padding: 35px 0 55px;
+$section__padding--big: 80px 0 60px;
+$text__padding: 0 0 35px;
+
+/* links */
+$links-color--black: $color--black;
+$links-color--lightgrey: $color--lightgrey;
+$links-color--red: $font__color--red;
+
+/* btn */
+$btn__background--white: $background-color--white;
+$btn__background--red: $background-color--red;
+$btn__background--cream: $color--cream;
+$btn__background--active: $color--blue;
+$btn__background--hover: #5C6469;
+$btn__color--white: $font__color--white;
+$btn__color--black: $font__color--black;
+$btn__color--grey: $color--darkgrey;
+
+$btn__font-size: 14px;
+$btn__font-weight: $font__weight--normal;
+$btn__font-line: $line-height--small;
+
+
+/* hover */
+
+
+/* grid */
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px) !default;
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1450px) !default;
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 1.5rem !default;
+
+
+$xs: '(max-width: 375px)' !default;
+$sm: '(max-width: #{map-get($grid-breakpoints , sm) - 1px})' !default;
+$md: '(max-width: #{map-get($grid-breakpoints, md) - 1px})' !default;
+$lg: '(max-width: #{map-get($grid-breakpoints, lg) - 1px})' !default;
+$xl: '(max-width: #{map-get($grid-breakpoints, xl) - 1px})' !default;
+$xxl: '(max-width: #{map-get($grid-breakpoints, xxl) - 1px})' !default;
+
+$min-xs: '(min-width: 375px)';
+$min-sm: '(min-width: #{map-get($grid-breakpoints, sm)})' !default;
+$min-md: '(min-width: #{map-get($grid-breakpoints, md)})' !default;
+$min-lg: '(min-width: #{map-get($grid-breakpoints, lg)})' !default;
+$min-xl: '(min-width: #{map-get($grid-breakpoints, xl)})' !default;
+$min-xxl: '(min-width: #{map-get($grid-breakpoints, xxl)})' !default;

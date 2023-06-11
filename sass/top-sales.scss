@@ -1,0 +1,59 @@
+.top-sales {
+	background-color: $background-color--cream;
+	text-align: center;
+	padding: $section__padding;
+
+	h2 {
+		color: $h2__color--black;
+	}
+
+	p {
+		color: $font__color--red;
+		font-style: italic;
+		font-size: $font__size--large;
+		font-weight: $font__weight--normal;
+		line-height: $line-height--normal;
+		padding: $text__padding;
+		margin: 0;
+	}
+
+	&__coupon {
+		    width: 250px;
+		    height: 300px;
+		    display: flex;
+		    flex-direction: column;
+		    align-items: center;
+		    row-gap: 15px;
+		    background-image: url(../img/coupones-background.png);
+		    background-size: contain;
+		    background-position: center;
+		    background-repeat: no-repeat;
+		    padding: 25px 10px;
+		    margin: 5px auto;
+
+		    @media #{$min-xl} {
+		    	width: 275px;
+		    	height: 333px;
+		    }
+
+		.coupon__logo {
+			height: 20px;
+		}
+
+		.coupon__picture {
+			width: 90%;
+		}
+
+		h3 {
+			margin: 0;
+		}
+
+		p {
+			width: 70%;
+			color: $font__color--grey;
+			font-size: $font__size--small;
+			font-weight: $font__weight--ligth;
+			padding: 0;
+		}
+	}
+}

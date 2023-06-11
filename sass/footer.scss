@@ -1,0 +1,80 @@
+.footer {
+	color: $font__color--white;
+	font-size: $font__size--medium;
+	line-height: $line-height--small;
+	text-align: center;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		row-gap: 30px;
+	}
+
+	p {
+		margin: 0;
+	}
+
+	&__top {
+		padding: 20px 0 5px;
+		background-color: #404040;
+	}
+
+	&__our-sites {
+
+			font-size: $font__size--extralarge;
+			font-weight: $font__weight--ligth;
+			line-height: $line-height--small;
+
+		.our-sites__list {
+			list-style: none;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+			padding: 10px 0 0;
+			gap: 20px;
+			margin: 0;
+
+			li {
+				width: 120px;
+				min-height: 30px;
+
+				img {
+					width: 80%;
+					height: 80%;
+					object-fit: contain;
+				}
+
+
+				a {
+					display: flex;
+				    flex-direction: column;
+				    align-items: center;
+				    font-weight: 100;
+				    color: $color--lightgrey;
+				    font-size: $font__size--small;
+				    text-decoration: none;
+
+				    &:hover {
+				    	color: $color--red;
+				    }
+				}
+			}
+		}
+	}
+
+	&__logo--saving-united {
+		height: 60px;
+	}
+
+	&__bottom {
+		background-color: $color--blue;
+
+		p {
+			font-size: $font__size--smallest;
+			line-height: 10px;
+		}
+	}
+}

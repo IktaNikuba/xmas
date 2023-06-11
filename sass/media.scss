@@ -1,0 +1,29 @@
+.media {
+    padding: $section__padding;
+
+    h2 {
+    	padding: $h2__padding--bottom;
+    }
+
+    &__list {
+        padding: 0;
+    	list-style: none;
+    	display: flex;
+    	align-items: center;
+        justify-content: center;
+        gap: 35px;
+        flex-wrap: wrap;
+
+        li {
+           max-width: 200px;
+           min-width: 100px;
+           min-height: 20px;
+
+           img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+           }
+        }
+    }
+}
